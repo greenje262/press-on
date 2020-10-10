@@ -1,0 +1,199 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Sprites/dungeon_tiles_edit.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/dungeon_tiles_ts.png" type="Texture" id=2]
+
+
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 8 )
+
+[node name="Tiles" type="Node2D"]
+
+[node name="Floor1" type="Sprite" parent="."]
+position = Vector2( 0, -18 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 40, 12, 16, 16 )
+
+[node name="Floor2" type="Sprite" parent="."]
+position = Vector2( 18, -18 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 23, 12, 16, 16 )
+
+[node name="Floor3" type="Sprite" parent="."]
+position = Vector2( 36, -18 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 55, 17, 16, 16 )
+
+[node name="Floor4" type="Sprite" parent="."]
+position = Vector2( 54, -18 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 67, 38, 16, 16 )
+
+[node name="Wall1" type="Sprite" parent="."]
+position = Vector2( -18, -18 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 107, 39, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall1/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Wall2" type="Sprite" parent="."]
+position = Vector2( -36, -18 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 122, 39, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Wall3" type="Sprite" parent="."]
+position = Vector2( -54, -18 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 123, 23, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall3/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Wall4" type="Sprite" parent="."]
+position = Vector2( -54, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 123, 7, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall4/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Wall5" type="Sprite" parent="."]
+position = Vector2( -36, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 91, 7, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall5/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Wall6" type="Sprite" parent="."]
+position = Vector2( -18, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 91, 39, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall6/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Wall7" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 91, 71, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall7/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Wall8" type="Sprite" parent="."]
+position = Vector2( 18, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 91, 87, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall8/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Wall9" type="Sprite" parent="."]
+position = Vector2( 36, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 7, 103, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall9"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall9/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Wall10" type="Sprite" parent="."]
+position = Vector2( 54, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 23, 103, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall10"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall10/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Wall11" type="Sprite" parent="."]
+position = Vector2( 54, 18 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 16, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall11"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall11/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Wall12" type="Sprite" parent="."]
+position = Vector2( 36, 18 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 16, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall12"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall12/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Wall13" type="Sprite" parent="."]
+position = Vector2( 18, 18 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall13"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall13/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Wall14" type="Sprite" parent="."]
+position = Vector2( 0, 18 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall14"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall14/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Wall15" type="Sprite" parent="."]
+position = Vector2( -18, 18 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 32, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall15"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall15/StaticBody2D"]
+shape = SubResource( 1 )

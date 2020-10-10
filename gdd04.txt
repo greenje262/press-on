@@ -1,0 +1,52 @@
+[GAME TITLE]
+
+Core mechanic
+    Escaping a maze
+
+Core gameplay loop
+    The player attempts to leave the maze, but if they stop moving, their progress resets
+
+Intended player experience
+    Trial and error, continual effort with no solution in sight
+    The Dark Souls push
+
+Theme
+    Dark, underworld-ish vibe - tunnels? dungeon?
+        Or? A celestial vibe - trapped in heaven?
+
+Primary features
+    Player sprite & movement
+    Maze - large, with a single exit to a worse place
+    Progress reset mechanic
+
+Secondary features
+    Safe space mechanic - a bonfire?
+    Sound effects & music
+        1. Progress reset sound
+        2. Maze music
+        3. Walking noises
+
+Polish
+    Outer maze
+    Further audio design:
+        1. Progress reset barks
+        2. Safe space music
+
+What do I need to learn?
+    Tileset refresher
+    Player movement refresher
+    Fixing the camera to a small portion of the game scene
+    Only lighting a portion of the game scene
+
+Workflow
+    Design player character and maze
+    Draw character sprite walking (and falling? animations)
+    Draw maze tiles and make into tilemap
+    Build maze in Godot
+    Code in movement and progress reset functionality
+    Add progress reset animation, text barks (in the vein of "You Died")
+    Add in progress reset sound, ambient maze music, walking noises
+    Implement safe spaces
+    Record voice progress reset barks
+    Write overarching script
+    Record voiceovers to play at random in safe spaces

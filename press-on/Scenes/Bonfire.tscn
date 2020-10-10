@@ -1,0 +1,58 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Sprites/fire_sprite/base3.PNG" type="Texture" id=1]
+[ext_resource path="res://Sprites/fire_sprite/base2.PNG" type="Texture" id=2]
+[ext_resource path="res://Sprites/fire_sprite/base1.PNG" type="Texture" id=3]
+[ext_resource path="res://Sprites/flame_light.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Bonfire.gd" type="Script" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "bonfire",
+"speed": 8.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16, 16 )
+
+[sub_resource type="Gradient" id=3]
+colors = PoolColorArray( 1, 0.09375, 0, 1, 0.898438, 1, 0, 1 )
+
+[sub_resource type="GradientTexture" id=4]
+gradient = SubResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 15.0
+gravity = Vector3( 0, 30, 0 )
+initial_velocity = 50.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+color_ramp = SubResource( 4 )
+
+[node name="Bonfire" type="AnimatedSprite"]
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+animation = "bonfire"
+frame = 3
+playing = true
+script = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="Light2D" type="Light2D" parent="."]
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 4 )
+
+[node name="LightTween" type="Tween" parent="Light2D"]
+
+[node name="Particles2D" type="Particles2D" parent="."]
+amount = 3
+randomness = 1.0
+process_material = SubResource( 5 )
